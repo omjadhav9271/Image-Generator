@@ -27,19 +27,19 @@ const Wrapper = styled.div`
 
 function App() {
   return (
-    <ThemeProvider theme={darkTheme}>
-      <Container>
-        <Wrapper>
-          <BrowserRouter>
+    <BrowserRouter>
+      <ThemeProvider theme={darkTheme}>
+        <Container>
+          <Wrapper>
             <Navbar />
             <Routes>
-              <Route path="/" exact element={<Home />} />
-              <Route path="/post" exact element={<CreatePost />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/post" element={<CreatePost />} />
             </Routes>
-          </BrowserRouter>
-        </Wrapper>
-      </Container>
-    </ThemeProvider>
+          </Wrapper>
+        </Container>
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 
